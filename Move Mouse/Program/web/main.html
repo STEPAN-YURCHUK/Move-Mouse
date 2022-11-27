@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работник спи спокойно</title>
+
+    <script src="eel.js"></script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Привет работник года!<br>Выбери на сколько времени заставить мышь работать без тебя:D</h1>
+
+    <div class="box">
+        <from action="#">
+            <input type="submit" id="btn15" value="15 минут">
+            <input type="submit" id="btn30" value="30 минут">
+            <input type="submit" id="btn1" value="1 час">
+            <input type="submit" id="btn2" value="2 часа">
+            <input type="submit" id="btn6" value="До 6 вечера">
+        </from>
+    </div>
+    
+    <script>
+        let btn15 = document.querySelector("#btn15");
+        btn15.addEventListener("click", time15);
+
+        let btn30 = document.querySelector("#btn30");
+        btn30.addEventListener("click", time30);
+
+        let btn1 = document.querySelector("#btn1");
+        btn1.addEventListener("click", time1);
+
+        let btn2 = document.querySelector("#btn2");
+        btn2.addEventListener("click", time2);
+
+        let btn6 = document.querySelector("#btn6");
+        btn6.addEventListener("click", time6);
+
+
+        async function time15() {
+            eel.mouse(15);
+        }
+        async function time30() {
+            eel.start(strat);
+        }
+        async function time1() {
+            eel.mouse(1);
+        }
+        async function time2() {
+            eel.mouse(2);
+        }
+        async function time6() {
+            eel.mouse(6);
+        }
+    </script>
+
+</body>
+</html>
